@@ -10,5 +10,5 @@ func rotateString(s string, goal string) bool {
 }
 
 func main() {
-	fmt.Println(rotateString("adc", "cad"))
+	fmt.Println(rotateString("adcd", "cad"))
 }
