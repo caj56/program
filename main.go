@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"slices"
 	"strings"
 )
 
@@ -48,6 +49,14 @@ func checkTree(p,q *TreeNode) bool {
 		return false
 	}
 	return p.Val == q.Val && checkTree(p.Left, q.Right) && checkTree(p.Right, q.Left)
+}
+
+// 旋转数组
+func rotate(nums []int, k int)  {
+    k %= len(nums)
+	slices.Reverse(nums)
+	slices.Reverse(nums[:k])
+	slices.Reverse(nums[k:])
 }
 
 func main() {
